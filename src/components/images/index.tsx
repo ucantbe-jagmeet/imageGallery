@@ -15,7 +15,7 @@ const Images = () => {
     });
   }, []);
   return (
-    <div className="p-5 md:py-10 md:px-20 grid gap-10 lg:grid-cols-2 2xl:grid-cols-4">
+    <div className="p-5 md:py-10 md:px-20 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
       {images.map((imagesCol, index) => {
         return <ImagesCol key={index} images={imagesCol} />;
       })}
