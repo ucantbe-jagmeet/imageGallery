@@ -4,9 +4,9 @@ import { BsToggleOff, BsToggleOn } from "react-icons/bs";
 
 const Header = () => {
   const [darkTheme, setdarkTheme] = useState(false);
-
   const handleBtn = () => {
     setdarkTheme(!darkTheme);
+    // localStorage.setItem( theme , darkTheme)
   };
   return (
     <header
@@ -57,13 +57,13 @@ const Header = () => {
         />
       </div>
       <ul className="flex font-[montserrat] font-bold w-[259px] gap-10 -ml-20 text-[12px]">
-        <li className="">
+        <li>
           <a href="#">Explore</a>
         </li>
-        <li className="">
+        <li>
           <a href="#">Collection</a>
         </li>
-        <li className="">
+        <li>
           <a href="#">Community</a>
         </li>
       </ul>
