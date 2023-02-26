@@ -6,7 +6,7 @@ const ImagesCol: FC<{ images: ImagesType }> = ({ images }) => {
   return (
     <section className="flex flex-col gap-y-10">
       {images.map((image, index) => {
-        const { id, likes, user, description, links, urls }=image
+        const { id, likes, user, description, links, urls } = image;
         const userObj: UserType = {
           name: user.name,
           username: user.username,

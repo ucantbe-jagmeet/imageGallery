@@ -11,9 +11,9 @@ const useImageStore = create<ImageStoreType>()(
         isModalOpen: false,
         selectedImage: null,
         addImages: (images) => {
-          const results: ImagesType[] = [[], [], [], []];
+          const results: ImagesType[] = [[], [], []];
           images.forEach((image, index) => {
-            results[index % 4].push(image as Random);
+            results[index % 3].push(image as Random);
           });
           set((prevState) => ({ ...prevState, images: results }));
         },

@@ -12,7 +12,7 @@ const SearchBarCard = () => {
   };
 
   return (
-    <section className="bg-[url('/assets/mountain.jpg')] bg-cover bg-no-repeat bg-center px-10 min-h-[28rem] flex flex-col gap-y-5 justify-center items-center bg-blend-overlay bg-gray-600">
+    <section className="bg-[url('/assets/mountain.jpg')] bg-cover bg-no-repeat bg-center px-10 min-h-[28rem] flex flex-col gap-y-5 justify-center items-center bg-blend-overlay bg-gray-600 ">
       <h1 className="text-white font-bold text-3xl text-center">
         Download High Display Images by creators
       </h1>

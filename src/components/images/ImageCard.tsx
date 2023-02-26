@@ -1,5 +1,5 @@
 import { AiOutlineLike } from "react-icons/ai";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { ImageCardType } from "../../types";
 import useImageStore from "../../app/imageStore";
 import { convertLikes } from "../../utils";
@@ -14,13 +14,27 @@ const ImageCard: FC<ImageCardType> = ({
   const { toggleModal, selectImage } = useImageStore((store) => {
     return { toggleModal: store.toggleModal, selectImage: store.selectImage };
   });
+
+  const [darkTheme, setdarkTheme] = useState(false);
+
+  const handleBtn = () => {
+    setdarkTheme(!darkTheme);
+  };
   return (
     <article
-      className="border-[1px] border-gray-200 rounded-md hover:scale-95 hover:transition-transform cursor-pointer shadow-xl"
+      className={
+        !darkTheme
+          ? "border-[1px] border-gray-200 rounded-md hover:scale-95 hover:transition-transform cursor-pointer shadow-xl "
+          : "border-[1px] border-gray-200 rounded-md hover:scale-95 hover:transition-transform cursor-pointer shadow-xl bg-black "
+      }
       onClick={() => {
         toggleModal();
         selectImage({
-          description,download_url,img_url, likes,user
+          description,
+          download_url,
+          img_url,
+          likes,
+          user,
         });
       }}
     >

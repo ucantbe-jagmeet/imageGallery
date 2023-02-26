@@ -11,6 +11,8 @@ const Images = () => {
 
   useEffect(() => {
     getRandomPhotos().then((images) => {
+      console.log("images", images);
+
       addImages(images);
     });
   }, []);

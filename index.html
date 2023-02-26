@@ -4,9 +4,34 @@
     <meta charset="UTF-8" />
     <link rel="shortcut icon" href="/src/favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      if (
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
     <title>Image Gallery</title>
   </head>
-  <body class="scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent">
+  <body
+    class="scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent"
+  >
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
