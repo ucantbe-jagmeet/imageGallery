@@ -6,7 +6,6 @@ const Header = () => {
   const [darkTheme, setdarkTheme] = useState(false);
   const handleBtn = () => {
     setdarkTheme(!darkTheme);
-    // localStorage.setItem( theme , darkTheme)
   };
   return (
     <header
